@@ -97,11 +97,14 @@
 * body main #buttons button:nth-child(1) {
   background-color: hsl(245, 75%, 52%);
   color: hsl(225, 100%, 98%);
+  font-weight: 500;
+  box-shadow: 0vw 1.5vw 1.2vw -0.6vw hsla(245, 75%, 52%, 0.3);
 }
 * body main #buttons button:nth-child(2) {
   background-color: transparent;
   color: hsl(224, 23%, 55%);
   font-weight: 700;
+  box-shadow: none;
 }
 * body main #buttons button:nth-child(2):hover {
   color: hsl(223, 47%, 23%);
@@ -114,54 +117,54 @@
   * body main h1 {
     font-size: 3rem;
   }
-  * body main p, * body main #description span, * body main a, * body main button {
-    font-size: 1.8rem;
-  }
   * body main h2 {
     font-size: 2rem;
   }
+  * body main p, * body main #description span, * body main a, * body main button {
+    font-size: 1.8rem;
+  }
 }
-@media (max-width: 2200px) {
+@media (max-width: 2500px) {
   * body main h1 {
     font-size: 2.3rem;
   }
-  * body main p, * body main #description span, * body main a, * body main button {
-    font-size: 1.4rem;
-  }
   * body main h2 {
     font-size: 1.5rem;
+  }
+  * body main p, * body main #description span, * body main a, * body main button {
+    font-size: 1.4rem;
   }
 }
 @media (max-width: 1800px) {
   * body main h1 {
     font-size: 1.7rem;
   }
-  * body main p, * body main #description span, * body main a, * body main button {
-    font-size: 1.1rem;
-  }
   * body main h2 {
     font-size: 1.2rem;
+  }
+  * body main p, * body main #description span, * body main a, * body main button {
+    font-size: 1.1rem;
   }
 }
 @media (max-width: 1440px) {
   * body main h1 {
     font-size: 1.4rem;
   }
-  * body main p, * body main #description span, * body main a, * body main button {
-    font-size: 0.85rem;
-  }
   * body main h2 {
     font-size: 0.9rem;
+  }
+  * body main p, * body main #description span, * body main a, * body main button {
+    font-size: 0.85rem;
   }
 }
 @media (max-width: 1040px) {
   * body main h1 {
     font-size: 1.1rem;
   }
-  * body main p, * body main #description span, * body main a, * body main button {
-    font-size: 0.75rem;
-  }
   * body main h2 {
     font-size: 0.8rem;
+  }
+  * body main p, * body main #description span, * body main a, * body main button {
+    font-size: 0.75rem;
   }
 }/*# sourceMappingURL=style.css.map */

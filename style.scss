@@ -8,6 +8,28 @@ $desaturated_blue: hsl(224, 23%, 55%);
 $dark_blue: hsl(223, 47%, 23%);
 $main_font: 'Red Hat Display', sans-serif;
 
+@mixin button_theme($bg_color: $bright_blue, $color: $very_pale_blue, $font_weight: 500, $box_shadow: 0vw 1.5vw 1.2vw -0.6vw $bright_blue_2) {
+    background-color: $bg_color;
+    color: $color;
+    font-weight: $font_weight;
+    box-shadow: $box_shadow;
+}
+
+@mixin font_sizes($size_01, $size_02, $size_03) {
+    main {
+        h1 {
+            font-size: $size_01;
+        }
+
+        h2 {
+            font-size: $size_02;
+        } 
+
+        p, #description span, a, button {
+            font-size: $size_03;
+        }
+    }
+}
 
 * {
     margin: 0;
@@ -116,14 +138,11 @@ $main_font: 'Red Hat Display', sans-serif;
                 }
 
                 button:nth-child(1) {
-                    background-color: $bright_blue;
-                    color: $very_pale_blue;
+                    @include button_theme;
                 }
 
                 button:nth-child(2) {
-                    background-color: transparent;
-                    color: $desaturated_blue;
-                    font-weight: 700;
+                    @include button_theme($bg_color: transparent, $color: $desaturated_blue, $font_weight: 700, $box_shadow: none);
                 }
 
                 button:nth-child(2):hover {
@@ -138,83 +157,23 @@ $main_font: 'Red Hat Display', sans-serif;
         }
 
         @media (max-width: 4000px) {
-            main {
-                h1 {
-                    font-size: 3rem;
-                }
-
-                p, #description span, a, button {
-                    font-size: 1.8rem;
-                }
-
-                h2 {
-                    font-size: 2rem;
-                } 
-            }
+            @include font_sizes($size_01: 3rem, $size_02: 2rem, $size_03: 1.8rem);
         }
 
-        @media (max-width: 2200px) {
-            main {
-                h1 {
-                    font-size: 2.3rem;
-                }
-
-                p, #description span, a, button {
-                    font-size: 1.4rem;
-                }
-
-                h2 {
-                    font-size: 1.5rem;
-                } 
-            }
+        @media (max-width: 2500px) {
+            @include font_sizes($size_01: 2.3rem, $size_02: 1.5rem, $size_03: 1.4rem);
         }
 
         @media (max-width: 1800px) {
-            main {
-                h1 {
-                    font-size: 1.7rem;
-                }
-
-                p, #description span, a, button {
-                    font-size: 1.1rem;
-                }
-
-                h2 {
-                    font-size: 1.2rem;
-                }
-            }
+            @include font_sizes($size_01: 1.7rem, $size_02: 1.2rem, $size_03: 1.1rem);
         }
 
         @media (max-width: 1440px) {
-            main {
-                h1 {
-                    font-size: 1.4rem;
-                }
-
-                p, #description span, a, button {
-                    font-size: 0.85rem;
-                }
-
-                h2 {
-                    font-size: 0.9rem;
-                }
-            }
+            @include font_sizes($size_01: 1.4rem, $size_02: 0.9rem, $size_03: 0.85rem);
         }
 
         @media (max-width: 1040px) {
-            main {
-                h1 {
-                    font-size: 1.1rem;
-                }
-
-                p, #description span, a, button {
-                    font-size: 0.75rem;
-                }
-
-                h2 {
-                    font-size: 0.8rem;
-                }
-            }
+            @include font_sizes($size_01: 1.1rem, $size_02: 0.8rem, $size_03: 0.75rem);
         }
     }
 }
