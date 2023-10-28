@@ -8,11 +8,16 @@ $desaturated_blue: hsl(224, 23%, 55%);
 $dark_blue: hsl(223, 47%, 23%);
 $main_font: 'Red Hat Display', sans-serif;
 
-@mixin button_theme($bg_color: $bright_blue, $color: $very_pale_blue, $font_weight: 500, $box_shadow: 0vw 1.5vw 1.2vw -0.6vw $bright_blue_2) {
+@mixin button_theme($bg_color: $bright_blue, $color: $very_pale_blue, $font_weight: 500, 
+                    $box_shadow: 0vw 1.5vw 1.2vw -0.6vw $bright_blue_2, $border_radius: 0.7vw) {
     background-color: $bg_color;
     color: $color;
     font-weight: $font_weight;
     box-shadow: $box_shadow;
+    font-family: $main_font;
+    height: 45%;
+    border: none;
+    border-radius: $border_radius;
 }
 
 @mixin font_sizes($size_01, $size_02, $size_03) {
@@ -126,13 +131,6 @@ $main_font: 'Red Hat Display', sans-serif;
                 width: 100%;
                 height: 30%;
 
-                button {
-                    font-family: $main_font;
-                    height: 45%;
-                    border: none;
-                    border-radius: 0.7vw;
-                }
-
                 button:hover {
                     cursor: pointer;
                 }
@@ -173,7 +171,40 @@ $main_font: 'Red Hat Display', sans-serif;
         }
 
         @media (max-width: 1040px) {
-            @include font_sizes($size_01: 1.1rem, $size_02: 0.8rem, $size_03: 0.75rem);
+            @include font_sizes($size_01: 1.1rem, $size_02: 0.85rem, $size_03: 0.75rem);
+        }
+
+        @media (max-width: 950px) {
+            @include font_sizes($size_01: 1.4rem, $size_02: 0.9rem, $size_03: 0.85rem);
+            
+            main {
+                width: 90vw;
+
+                #content {
+                    padding: 4vh 7vw;
+
+                    p {
+                        line-height: 3.5vh;
+                        width: 85%;
+                    }
+                }
+
+                .plan {
+                    height: 22%;
+                    padding: 0 6vw;
+                    border-radius: 2.5vw;
+    
+                    img {
+                        height: 60%;
+                    }
+                }
+
+                #buttons {
+                    button:nth-child(1) {
+                        @include button_theme($border_radius: 2.5vw);
+                    }
+                }
+            }
         }
     }
 }
