@@ -17,8 +17,8 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/ayrtton/order-summary-component)
-- Live Site URL: [Add live site URL here](https://ayrtton.github.io/order-summary-component)
+- [Solution URL here](https://github.com/ayrtton/order-summary-component)
+- [Live site URL here](https://ayrtton.github.io/order-summary-component)
 
 ## My process
 
@@ -33,5 +33,5 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 
 ## Author
 
-- Website - [Add your name here](https://ayrtonvinicius.vercel.app/)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/ayrtton)
+- Website - [Ayrton](https://ayrtonvinicius.vercel.app/)
+- Frontend Mentor - [@ayrtton](https://www.frontendmentor.io/profile/ayrtton)
