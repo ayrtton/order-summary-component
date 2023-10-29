@@ -34,6 +34,10 @@ $main_font: 'Red Hat Display', sans-serif;
             font-size: $size_03;
         }
     }
+
+    footer {
+        font-size: $size_03;
+    }
 }
 
 * {
@@ -50,7 +54,7 @@ $main_font: 'Red Hat Display', sans-serif;
 
         main {
             position: absolute;
-            top: 50%;
+            top: 49%;
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: white;
@@ -151,6 +155,23 @@ $main_font: 'Red Hat Display', sans-serif;
             a:hover, button:nth-child(1):hover {
                 opacity: 0.7;
                 text-decoration: none;
+            }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 3vh;
+            width: 100%;
+            text-align: center;
+            color: $dark_blue;
+
+            a {
+                text-decoration: none;
+                color: $bright_blue;
+            }
+
+            a:hover {
+                opacity: 0.9;
             }
         }
 
